@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../CSS/navbar.css";
+import "../CSS/Navbar.css";
 
 function NaviBar() {
   const [likes, setLikes] = useState(0);
