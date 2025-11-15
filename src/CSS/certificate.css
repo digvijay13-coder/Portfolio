@@ -1,0 +1,56 @@
+/* Container padding and margin */
+#certificate {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  color: #212529; /* Changed from #000000 to #212529 for consistency */
+  transition: color 0.3s ease;
+}
+
+/* Headings & paragraphs */
+#certificate h1 {
+  margin-bottom: 1.5rem;
+  color: #212529; /* Explicit color for h1 in light mode */
+  transition: color 0.3s ease;
+}
+
+/* Card styling */
+#certificate .card {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  border: 1px solid #dee2e6;
+}
+
+/* Card text colors */
+#certificate .card-title {
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+#certificate .card-text {
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode #certificate {
+  color: #ffffff;
+}
+
+body.dark-mode #certificate h1 {
+  color: #ffffff;
+}
+
+body.dark-mode #certificate .card {
+  background-color: #1e1e1e;
+  border-color: #444;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #certificate .card-title,
+body.dark-mode #certificate .card-text {
+  color: #e0e0e0;
+}

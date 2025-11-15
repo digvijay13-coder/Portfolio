@@ -1,0 +1,76 @@
+/* Container padding and margin */
+#skills {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+/* Heading */
+#skills h1 {
+  margin-bottom: 2rem;
+  color: #212529;
+  transition: color 0.3s ease;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Card styles */
+#skills .card {
+  border: 1px solid #dee2e6;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: default;
+}
+
+#skills .card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Card title */
+#skills .card-title {
+  color: #212529;
+  font-weight: 600;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Card image styling */
+#skills .card-img-top {
+  height: 150px;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: #f8f9fa; /* subtle background for icons */
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode #skills {
+  color: #e0e0e0;
+}
+
+body.dark-mode #skills h1 {
+  color: #ffffff;
+}
+
+body.dark-mode #skills .card {
+  background-color: #1e1e1e;
+  border-color: #444;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #skills .card:hover {
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode #skills .card-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode #skills .card-img-top {
+  background-color: #2a2a2a;
+}

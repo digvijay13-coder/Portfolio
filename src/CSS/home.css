@@ -1,0 +1,71 @@
+/* Section padding */
+#home {
+  padding: 3rem 0;
+}
+
+/* Typography (light mode default) */
+.info h1,
+.info h5,
+.info h4 {
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+/* Greeting inline container */
+.greeting-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: start;
+}
+
+.greeting-container p,
+.greeting-container h5 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+/* Button base style */
+.info button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light mode button hover */
+.info button:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+/* Image styling */
+.info img {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .info h1,
+body.dark-mode .info h5,
+body.dark-mode .info h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .info button {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+body.dark-mode .info button:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body.dark-mode .info img {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}

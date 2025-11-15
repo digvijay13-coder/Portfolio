@@ -1,0 +1,22 @@
+/* Light mode (default) */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Optional: Make links adapt */
+body.dark-mode a {
+  color: #ebebeb;
+}
+
+/* Adjust according to your navbar height */
+html {
+  scroll-padding-top: 80px; 
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,80 @@
+
+/* Make all card images same height and nicely cropped */
+.education .card-img-top {
+  height: 200px;       /* fixed height for all images */
+  object-fit: cover;   /* cover ensures image fills area without distortion */
+  width: 100%;         /* full card width */
+}
+
+/* Existing styles... */
+
+.about {
+  margin-bottom: 2rem; /* Adds gap between About and Education */
+}
+
+/* Container padding and margin */
+#about {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+/* Headings & paragraphs */
+.about h1,
+.education h2 {
+  margin-bottom: 1.5rem;
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+.about p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+/* Card styling */
+.card {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  border: 1px solid #dee2e6;
+}
+
+/* Card text colors */
+.card-title {
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+.card-text {
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode #about {
+  color: #ffffff;
+}
+
+body.dark-mode .about h1,
+body.dark-mode .about p,
+body.dark-mode .education h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #444;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+  color: #e0e0e0;
+}
