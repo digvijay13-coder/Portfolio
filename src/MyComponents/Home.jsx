@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../CSS/home.css";
-import my from "../images/my.jpg";
+import my from "../images/my.JPG";
 import Typed from "typed.js";
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 
