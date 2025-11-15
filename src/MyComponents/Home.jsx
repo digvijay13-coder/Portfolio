@@ -37,7 +37,7 @@ export default function Home() {
             <p><span ref={typedRef1}></span></p>
             <h5>I'm</h5>
           </div>
-          <h1>Digvijay Sutar</h1>
+          <h1>Digvijay Arun Sutar</h1>
           <h4><span ref={typedRef}></span></h4>
           <div className="d-flex flex-wrap gap-2 mt-3 justify-content-center justify-content-md-start">
             <a
