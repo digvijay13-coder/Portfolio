@@ -1,39 +1,33 @@
-.skill-card {
+.project-card {
   width: 100%;
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
+.project-card:hover {
+  transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-.skill-img {
+.project-img {
   width: 100%;
-  height: 160px;
-  object-fit: contain;
-  padding: 20px;
-  background: #f7f7f7;
+  height: 180px;
+  object-fit: cover;
 }
 
-.skill-card .card-title {
-  font-size: 1.2rem;
+.project-card .card-title {
+  font-size: 1.1rem;
   font-weight: 600;
   margin-top: 5px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .skill-img {
-    height: 130px;
+  .project-img {
+    height: 150px;
   }
   h1 {
     font-size: 2rem;

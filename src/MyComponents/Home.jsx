@@ -2,15 +2,15 @@ import { useEffect, useRef } from "react";
 import "../CSS/home.css";
 import my from "../images/my.JPG";
 import Typed from "typed.js";
-import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function Home() {
-  const typedRef = useRef(null); // reference for job titles
-  const typedRef1 = useRef(null); // reference for greetings
+  const typedRef = useRef(null);
+  const typedRef1 = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Java Developer", "Front-End Developer","Back-End Developer", "ReactJS Developer", "Spring Boot Developer"],
+      strings: ["Java Developer", "Front-End Developer", "Back-End Developer", "ReactJS Developer", "Spring Boot Developer"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -31,54 +31,30 @@ export default function Home() {
 
   return (
     <section className="container" id="home">
-      <section className="info">
-        <div className="row align-items-center">
-          {/* Left Column - Text */}
-          <div
-            className="col-md-6 col-sm-12 p-5 text-center text-md-start"
-            data-aos="fade-up-right"
-            data-aos-duration="1000"
-          >
-            <div className="greeting-container">
-              <p><span ref={typedRef1}></span></p>
-              <h5>I'm</h5>
-            </div>
-
-            <h1>Digvijay Sutar</h1>
-            <h4>
-              <span ref={typedRef}></span>
-            </h4>
-
-            {/* Buttons */}
-            <div className="d-flex flex-wrap gap-2 mt-3">
-              {/* View in Browser Button */}
-              <a
-                href="https://drive.google.com/file/d/15LtAFIeQVOzlKq-DkMoRRfjXTqxFWQoB/view?usp=drive_link"
-                className="btn btn-primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-eye me-2"></i>
-                Resume
-              </a>
-            </div>
+      <div className="row align-items-center home-row">
+        <div className="col-md-6 col-sm-12 text-center text-md-start fade-in home-left">
+          <div className="greeting-container">
+            <p><span ref={typedRef1}></span></p>
+            <h5>I'm</h5>
           </div>
-
-          {/* Right Column - Image */}
-          <div
-            className="col-md-6 col-sm-12 text-center"
-            data-aos="fade-up-left"
-            data-aos-duration="1000"
-          >
-            <img
-              className="rounded-5"
-              src={my}
-              height={350}
-              alt="Digvijay Sutar"
-            />
+          <h1>Digvijay Sutar</h1>
+          <h4><span ref={typedRef}></span></h4>
+          <div className="d-flex flex-wrap gap-2 mt-3 justify-content-center justify-content-md-start">
+            <a
+              href="https://drive.google.com/file/d/15LtAFIeQVOzlKq-DkMoRRfjXTqxFWQoB/view?usp=drive_link"
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-eye me-2"></i> Resume
+            </a>
           </div>
         </div>
-      </section>
+
+        <div className="col-md-6 col-sm-12 text-center fade-in home-right">
+          <img className="rounded-5 home-img" src={my} alt="Digvijay Sutar" />
+        </div>
+      </div>
     </section>
   );
 }

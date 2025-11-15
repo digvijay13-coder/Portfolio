@@ -1,29 +1,32 @@
-import "../CSS/certificate.css"
-function Certificate() {
-  return (
-    <>
-      <section className="container" id="certificate">
-        <section className="certificate"
-         data-aos="flip-right"
-          data-aos-duration="1000"
-           style={{ padding: "2rem", alignContent: "center", marginBottom: "2rem" }}>
-          <div className="row row-cols-1 row-cols-md-3 g-4"></div>
-          <h1>Certification</h1>
+import "../CSS/certificate.css";
+import CER from "../images/CER.JPG";
 
-          <div className="col" style={{ alignContent: "center", width: "auto" }}>
-            <div className="card">
-              <img src="..." className="card-img-top" alt="..." />
+function Certificate() {
+  const certificates = [
+    {
+      title: "Java Full Stack Certification",
+      img: CER,
+      description: "Completed full-stack Java development course including Spring Boot and React."
+    }
+  ];
+
+  return (
+    <section className="container" id="certificate" style={{ padding: "2rem", marginBottom: "3rem" }}>
+      <h1 className="text-center mb-4">Certification</h1>
+      <div className="row g-4 justify-content-center">
+        {certificates.map((cert, index) => (
+          <div key={index} className="col-12 col-sm-6 col-md-4">
+            <div className="card cert-card h-100 text-center">
+              <img src={cert.img} className="card-img-top cert-img" alt={cert.title} />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  This is a longer card with supporting text below as a natural lead-in to additional content.
-                </p>
+                <h5 className="card-title">{cert.title}</h5>
+                <p className="card-text">{cert.description}</p>
               </div>
             </div>
           </div>
-        </section>
-      </section>
-    </>
+        ))}
+      </div>
+    </section>
   );
 }
 

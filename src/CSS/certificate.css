@@ -1,56 +1,59 @@
-/* Container padding and margin */
 #certificate {
-  padding: 2rem;
-  margin-bottom: 3rem;
-  color: #212529; /* Changed from #000000 to #212529 for consistency */
-  transition: color 0.3s ease;
+  text-align: center;
+  padding: 2rem 0;
 }
 
-/* Headings & paragraphs */
+/* Section Title */
 #certificate h1 {
-  margin-bottom: 1.5rem;
-  color: #212529; /* Explicit color for h1 in light mode */
-  transition: color 0.3s ease;
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
-/* Card styling */
-#certificate .card {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  border: 1px solid #dee2e6;
+/* Certificate Card */
+.cert-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* Card text colors */
-#certificate .card-title {
-  color: #212529;
-  transition: color 0.3s ease;
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-#certificate .card-text {
-  color: #212529;
-  transition: color 0.3s ease;
+/* Certificate Image */
+.cert-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Makes image fill card proportionally */
 }
 
-/* Dark mode overrides */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+/* Card Body */
+.cert-card .card-body {
+  padding: 1rem;
 }
 
-body.dark-mode #certificate {
-  color: #ffffff;
+.cert-card .card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-body.dark-mode #certificate h1 {
-  color: #ffffff;
+.cert-card .card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
 }
 
-body.dark-mode #certificate .card {
-  background-color: #1e1e1e;
-  border-color: #444;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cert-img {
+    height: 180px;
+  }
 }
 
-body.dark-mode #certificate .card-title,
-body.dark-mode #certificate .card-text {
-  color: #e0e0e0;
+@media (max-width: 576px) {
+  .cert-img {
+    height: 150px;
+  }
 }

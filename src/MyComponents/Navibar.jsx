@@ -1,74 +1,54 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import "../CSS/navbar.css";
 
 function NaviBar() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [likes, setLikes] = useState(0);
+  const [liked, setLiked] = useState(false);
+  const views = 100;
 
-  const toggleMode = () => {
-    setDarkMode(!darkMode);
+  const handleLike = () => {
+    if (!liked) {
+      setLikes(likes + 1);
+      setLiked(true);
+    }
   };
 
-  // Add/remove class to <body> based on mode
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
-
   return (
-    <nav
-      className={`mb-3 sticky-top navbar navbar-expand-lg ${
-        darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light" 
-      }`}
-    >
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div className="container">
         <a className="navbar-brand" href="#">Portfolio</a>
+
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-target="#navbarNav"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          {/* Left side nav links */}
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav nav-underline">
-            <li className="nav-item">
-              <a className="nav-link" href="#home">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#about">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#certificate">Certificate</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#skills">Skills</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#projects">Projects</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#contact">Contact</a>
-            </li>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          {/* Left Links */}
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
+            <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
+            <li className="nav-item"><a className="nav-link" href="#certificate">Certificate</a></li>
+            <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
+            <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
+            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
           </ul>
 
-          {/* Right side dark mode toggle */}
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <button className="btn nav-link" onClick={toggleMode}>
-                {darkMode ? (
-                  <i className="bi bi-sun-fill text-warning"></i>
-                ) : (
-                  <i className="bi bi-moon-stars-fill text-dark"></i>
-                )}
+          {/* Right Icons */}
+          <ul className="navbar-nav ms-auto d-flex align-items-center gap-3">
+            <li className="nav-item d-flex align-items-center">
+              <button className={`btn p-0 btn-like ${liked ? "liked" : ""}`} onClick={handleLike}>
+                {liked ? <i className="bi bi-heart-fill text-danger"></i> : <i className="bi bi-heart text-danger"></i>}
               </button>
+              <span className="ms-2">{likes}</span>
+            </li>
+            <li className="nav-item d-flex align-items-center">
+              <i className="bi bi-eye-fill"></i>
+              <span className="ms-2">{views}</span>
             </li>
           </ul>
         </div>

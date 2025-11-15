@@ -1,0 +1,25 @@
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+footer .footer-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.8rem;
+}
+
+footer .footer-icons a {
+  color: #212529;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .footer-icons a:hover {
+  transform: scale(1.2);
+  color: #0d6efd;
+}
