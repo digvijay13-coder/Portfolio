@@ -1,5 +1,5 @@
 import "../CSS/certificate.css";
-import CER from "../images/CER.JPG";
+import CER from "../images/CER.jpg";
 
 function Certificate() {
   const certificates = [
