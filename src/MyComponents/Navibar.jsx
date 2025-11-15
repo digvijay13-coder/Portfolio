@@ -4,7 +4,7 @@ import "../CSS/Navbar.css";
 function NaviBar() {
   const [likes, setLikes] = useState(0);
   const [liked, setLiked] = useState(false);
-  const views = 100;
+  const views = 1000;
 
   const handleLike = () => {
     if (!liked) {
